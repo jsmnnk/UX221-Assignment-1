@@ -1,1 +1,37 @@
 [12-Apr-2025 06:35:04 UTC] PHP Warning:  Undefined array key "host" in /workspaces/UX221-Assignment-1/.wordpress/wp-includes/pluggable.php on line 1625
+[12-Apr-2025 07:40:53 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE wp_ecp_x_category (
+		  id bigint(9) UNSIGNED NOT NULL AUTO_INCREMENT,
+		  category_id bigint(9) UNSIGNED NOT NULL UNIQUE,
+		  post_id bigint(9) UNSIGNED NOT NULL UNIQUE,
+		  taxonomy varchar(100) NOT NULL,
+		  PRIMARY KEY  id (id)
+		) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4117 in Function <code>handle_error</code>. Error message was: Cannot combine AUTOINCREMENT and multiple primary keys in SQLite.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /workspaces/UX221-Assignment-1/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(287): WP_SQLite_Translator->get_error_message()
+#1 /workspaces/UX221-Assignment-1/.wordpress/wp-admin/includes/upgrade.php(3271): WP_SQLite_DB->query('CREATE TABLE wp...')
+#2 /workspaces/UX221-Assignment-1/.wordpress/wp-content/plugins/enhanced-category-pages/classes/ecp/WP_Integration.php(57): dbDelta(Array)
+#3 /workspaces/UX221-Assignment-1/.wordpress/wp-includes/class-wp-hook.php(324): ecp\WP_Integration->install(false)
+#4 /workspaces/UX221-Assignment-1/.wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#5 /workspaces/UX221-Assignment-1/.wordpress/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#6 /workspaces/UX221-Assignment-1/.wordpress/wp-admin/includes/plugin.php(703): do_action('activate_enhanc...', false)
+#7 /workspaces/UX221-Assignment-1/.wordpress/wp-admin/plugins.php(60): activate_plugin('enhanced-catego...', 'http://localhos...', false)
+#8 {main}</pre>
+ for query CREATE TABLE wp_ecp_x_category (
+		  id bigint(9) UNSIGNED NOT NULL AUTO_INCREMENT,
+		  category_id bigint(9) UNSIGNED NOT NULL UNIQUE,
+		  post_id bigint(9) UNSIGNED NOT NULL UNIQUE,
+		  taxonomy varchar(100) NOT NULL,
+		  PRIMARY KEY  id (id)
+		) DEFAULT CHARACTER SET utf8mb4 made by activate_plugin, do_action('activate_enhanced-category-pages/enhanced-category-pages.php'), WP_Hook->do_action, WP_Hook->apply_filters, ecp\WP_Integration->install, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
