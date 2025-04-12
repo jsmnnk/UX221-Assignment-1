@@ -12,12 +12,22 @@
     </url>
     <url>
         <loc>
-            http://localhost:8000/
+            http://localhost:8000/people-we-meet-on-vacation/
         </loc>
     </url>
     <url>
         <loc>
-            http://localhost:8000/sample-page/
+            http://localhost:8000/the-girl-with-the-dragon-tattoo/
+        </loc>
+    </url>
+    <url>
+        <loc>
+            http://localhost:8000/the-silent-patient/
+        </loc>
+    </url>
+    <url>
+        <loc>
+            http://localhost:8000/
         </loc>
     </url>
     <url>
