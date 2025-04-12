@@ -37,6 +37,11 @@
     </url>
     <url>
         <loc>
+            http://localhost:8000/mystery/
+        </loc>
+    </url>
+    <url>
+        <loc>
             http://localhost:8000/category/romance/
         </loc>
     </url>
